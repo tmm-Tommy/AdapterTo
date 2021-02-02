@@ -1,0 +1,37 @@
+<idea-plugin>
+  <id>tommy-adapterTo</id>
+  <name>tommy-adapterTo</name>
+  <version>1.0</version>
+  <vendor email="1223758238@qq.com" url="http://www.tmm-tommy.cn:8889">Tommy</vendor>
+
+  <description><![CDATA[
+      一个生成BaseAdapter的简易插件<br>
+      <em>支持基础的xml格式</em>
+    ]]></description>
+
+  <change-notes><![CDATA[
+      作者:tommy,版本v1.0,用于学习!<br>
+      <em>快捷键:ctrl+Shift+Alt+空格</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <action id="adapterTo" class="action.AdapterTo" text="adapterTo" description="生成适配器">
+      <add-to-group group-id="GenerateGroup" anchor="last"/>
+      <keyboard-shortcut keymap="$default" first-keystroke="shift ctrl SPACE" second-keystroke="shift ctrl alt SPACE"/>
+    </action>
+  </actions>
+
+</idea-plugin>
